@@ -1,5 +1,5 @@
 boto3
 oracledb
-psycopg2-binary
 pg8000
+PyMySQL
 urllib3

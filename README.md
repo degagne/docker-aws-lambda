@@ -67,6 +67,21 @@ The Docker images are tagged with the following format:
   - [`3.10-alpine3.22`](3.10/Dockerfile)
   - [`3.10-alpine3.22-slim`](3.10/Dockerfile.slim)
 
+### Variants
+
+The base images are built on Alpine Linux and support multiple Python versions. Additionally, by default, these
+images include third-party libraries for database connectivity.
+
+The following libraries are included:
+
+- `PyMySQL` for MySQL
+- `psycopg2-binary` for PostgreSQL
+- `oracledb` for Oracle
+
+Moreover, there are 'slim' variants available for each Python version, which are optimized for smaller image sizes
+and do not include these third-party libraries. These slim images are suitable for applications that do not require
+database connectivity.
+
 ## Usage
 
 To use these Docker images, you can build them using the provided Dockerfiles or pull them from a Docker
