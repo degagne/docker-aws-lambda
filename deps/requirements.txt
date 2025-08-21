@@ -1,0 +1,5 @@
+boto3
+oracledb
+psycopg2-binary
+pg8000
+urllib3

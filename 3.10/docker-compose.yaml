@@ -1,0 +1,85 @@
+services:
+
+  aws-lambda-3.10-alpine3.20:
+    image: ddegagne/aws-lambda:3.10-alpine3.20
+    build:
+      context: ..
+      dockerfile: 3.10/Dockerfile
+      args:
+        - DISTRO_VERSION=3.20
+        - CA_CERTIFICATE=${CA_CERTIFICATE:-https://mkcert.org/generate/}
+        - LAMBDA_USER=${LAMBDA_USER}
+        - LAMBDA_GROUP=${LAMBDA_GROUP}
+        - LAMBDA_TASK_ROOT=${LAMBDA_TASK_ROOT}
+        - LAMBDA_RUNTIME_INTERFACE=${LAMBDA_RUNTIME_INTERFACE}
+        - LAMBDA_RUNTIME_INTERFACE_EMULATOR=${LAMBDA_RUNTIME_INTERFACE_EMULATOR}
+
+  aws-lambda-3.10-alpine3.20-slim:
+    image: ddegagne/aws-lambda:3.10-alpine3.20-slim
+    build:
+      context: ..
+      dockerfile: 3.10/Dockerfile.slim
+      args:
+        - DISTRO_VERSION=3.20
+        - CA_CERTIFICATE=${CA_CERTIFICATE:-https://mkcert.org/generate/}
+        - LAMBDA_USER=${LAMBDA_USER}
+        - LAMBDA_GROUP=${LAMBDA_GROUP}
+        - LAMBDA_TASK_ROOT=${LAMBDA_TASK_ROOT}
+        - LAMBDA_RUNTIME_INTERFACE=${LAMBDA_RUNTIME_INTERFACE}
+        - LAMBDA_RUNTIME_INTERFACE_EMULATOR=${LAMBDA_RUNTIME_INTERFACE_EMULATOR}
+
+  aws-lambda-3.10-alpine3.21:
+    image: ddegagne/aws-lambda:3.10-alpine3.21
+    build:
+      context: ..
+      dockerfile: 3.10/Dockerfile
+      args:
+        - DISTRO_VERSION=3.21
+        - CA_CERTIFICATE=${CA_CERTIFICATE:-https://mkcert.org/generate/}
+        - LAMBDA_USER=${LAMBDA_USER}
+        - LAMBDA_GROUP=${LAMBDA_GROUP}
+        - LAMBDA_TASK_ROOT=${LAMBDA_TASK_ROOT}
+        - LAMBDA_RUNTIME_INTERFACE=${LAMBDA_RUNTIME_INTERFACE}
+        - LAMBDA_RUNTIME_INTERFACE_EMULATOR=${LAMBDA_RUNTIME_INTERFACE_EMULATOR}
+
+  aws-lambda-3.10-alpine3.21-slim:
+    image: ddegagne/aws-lambda:3.10-alpine3.21-slim
+    build:
+      context: ..
+      dockerfile: 3.10/Dockerfile.slim
+      args:
+        - DISTRO_VERSION=3.21
+        - CA_CERTIFICATE=${CA_CERTIFICATE:-https://mkcert.org/generate/}
+        - LAMBDA_USER=${LAMBDA_USER}
+        - LAMBDA_GROUP=${LAMBDA_GROUP}
+        - LAMBDA_TASK_ROOT=${LAMBDA_TASK_ROOT}
+        - LAMBDA_RUNTIME_INTERFACE=${LAMBDA_RUNTIME_INTERFACE}
+        - LAMBDA_RUNTIME_INTERFACE_EMULATOR=${LAMBDA_RUNTIME_INTERFACE_EMULATOR}
+
+  aws-lambda-3.10-alpine3.22:
+    image: ddegagne/aws-lambda:3.10-alpine3.22
+    build:
+      context: ..
+      dockerfile: 3.10/Dockerfile
+      args:
+        - DISTRO_VERSION=3.22
+        - CA_CERTIFICATE=${CA_CERTIFICATE:-https://mkcert.org/generate/}
+        - LAMBDA_USER=${LAMBDA_USER}
+        - LAMBDA_GROUP=${LAMBDA_GROUP}
+        - LAMBDA_TASK_ROOT=${LAMBDA_TASK_ROOT}
+        - LAMBDA_RUNTIME_INTERFACE=${LAMBDA_RUNTIME_INTERFACE}
+        - LAMBDA_RUNTIME_INTERFACE_EMULATOR=${LAMBDA_RUNTIME_INTERFACE_EMULATOR}
+
+  aws-lambda-3.10-alpine3.22-slim:
+    image: ddegagne/aws-lambda:3.10-alpine3.22-slim
+    build:
+      context: ..
+      dockerfile: 3.10/Dockerfile.slim
+      args:
+        - DISTRO_VERSION=3.22
+        - CA_CERTIFICATE=${CA_CERTIFICATE:-https://mkcert.org/generate/}
+        - LAMBDA_USER=${LAMBDA_USER}
+        - LAMBDA_GROUP=${LAMBDA_GROUP}
+        - LAMBDA_TASK_ROOT=${LAMBDA_TASK_ROOT}
+        - LAMBDA_RUNTIME_INTERFACE=${LAMBDA_RUNTIME_INTERFACE}
+        - LAMBDA_RUNTIME_INTERFACE_EMULATOR=${LAMBDA_RUNTIME_INTERFACE_EMULATOR}
