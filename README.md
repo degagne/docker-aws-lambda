@@ -2,6 +2,8 @@
 
 [![Docker Build and Push](https://github.com/degagne/docker-aws-lambda/actions/workflows/docker-ci.yml/badge.svg)](https://github.com/degagne/docker-aws-lambda/actions/workflows/docker-ci.yml)
 
+[![Dependency Vulnerabilities](https://img.shields.io/endpoint?url=https%3A%2F%2Fapi-hooks.soos.io%2Fapi%2Fshieldsio-badges%3FbadgeType%3DDependencyVulnerabilities%26pid%3D8y87rihef%26)](https://app.soos.io/research/repositories/github/degagne/docker-aws-lambda?attributionFormat=soosissues) [![Out Of Date Dependencies](https://img.shields.io/endpoint?url=https%3A%2F%2Fapi-hooks.soos.io%2Fapi%2Fshieldsio-badges%3FbadgeType%3DOutOfDateDependencies%26pid%3D8y87rihef%26)](https://app.soos.io/research/repositories/github/degagne/docker-aws-lambda?attributionFormat=soosissues)
+
 This project provides Docker images for running Python-based AWS Lambda functions. It includes Dockerfiles
 and a docker-compose.yaml configuration to build and manage containerized environments for AWS Lambda using
 Python 3.10+. The project supports both standard and slim versions of the images, based on Alpine Linux, to 
