@@ -22,7 +22,7 @@ jobs:
           sudo sh get-docker.sh
       - name: Install Docker Compose
         run: |
-          sudo curl -L "https://github.com/docker/compose/releases/download/v2.39.2/docker-compose-linux-x86_64" -o /usr/local/bin/docker-compose
+          sudo curl -L "https://github.com/docker/compose/releases/download/v5.1.0/docker-compose-linux-x86_64" -o /usr/local/bin/docker-compose
           sudo chmod +x /usr/local/bin/docker-compose
           docker-compose --version
       - name: Docker Login
@@ -32,8 +32,15 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and push Docker images
         run: |
-          docker compose --project-directory 3.14 --env-file base.env build --no-cache --provenance --push --parallel
-          docker compose --project-directory 3.13 --env-file base.env build --no-cache --provenance --push --parallel
-          docker compose --project-directory 3.12 --env-file base.env build --no-cache --provenance --push --parallel
-          docker compose --project-directory 3.11 --env-file base.env build --no-cache --provenance --push --parallel
-          docker compose --project-directory 3.10 --env-file base.env build --no-cache --provenance --push --parallel
+          docker compose --project-directory 3.14 --env-file base.env build --no-cache --provenance --parallel
+          docker compose --project-directory 3.13 --env-file base.env build --no-cache --provenance --parallel
+          docker compose --project-directory 3.12 --env-file base.env build --no-cache --provenance --parallel
+          docker compose --project-directory 3.11 --env-file base.env build --no-cache --provenance --parallel
+          docker compose --project-directory 3.10 --env-file base.env build --no-cache --provenance --parallel
+      - name: Push Docker images to registry
+        run: |
+          docker compose --project-directory 3.14 --env-file base.env push
+          docker compose --project-directory 3.13 --env-file base.env push
+          docker compose --project-directory 3.12 --env-file base.env push
+          docker compose --project-directory 3.11 --env-file base.env push
+          docker compose --project-directory 3.10 --env-file base.env push
