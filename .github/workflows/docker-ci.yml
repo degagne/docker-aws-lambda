@@ -32,3 +32,11 @@ jobs:
         run: |
           docker-compose --project-directory 3.14 --env-file base.env build --no-cache
           docker-compose --project-directory 3.14 --env-file base.env push
+          docker-compose --project-directory 3.13 --env-file base.env build --no-cache
+          docker-compose --project-directory 3.13 --env-file base.env push
+          docker-compose --project-directory 3.12 --env-file base.env build --no-cache
+          docker-compose --project-directory 3.12 --env-file base.env push
+          docker-compose --project-directory 3.11 --env-file base.env build --no-cache
+          docker-compose --project-directory 3.11 --env-file base.env push
+          docker-compose --project-directory 3.10 --env-file base.env build --no-cache
+          docker-compose --project-directory 3.10 --env-file base.env push
